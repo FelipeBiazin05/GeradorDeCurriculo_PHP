@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de curriculos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-4">
+        <div class="row g-4">
+            <nav class="col-md-3 d-none d-md-block">
+                <div class="position-sticky">
+                    <h5 class="mb-3">Navegar</h5>
+                    <div class="barraNavegacao">
+                        <a class="linkNavegacao list-group-item list-group-item-action" href="#info-pessoais">Informações Pessoais</a>
+                        <a class="linkNavegacao list-group-item list-group-item-action" href="#formacao">Formação Acadêmica</a>
+                        <a class="linkNavegacao list-group-item list-group-item-action" href="#experiencia">Experiência Profissional</a>
+                        <a class="linkNavegacao list-group-item list-group-item-action" href="#resumo">Resumo Profissional</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="col-12 d-md-none mb-2">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+                    Menu
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="sidebarOffcanvasLabel">Navegar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#info-pessoais" data-bs-dismiss="offcanvas">Informações Pessoais</a>
+                            <a class="list-group-item list-group-item-action" href="#formacao" data-bs-dismiss="offcanvas">Formação Acadêmica</a>
+                            <a class="list-group-item list-group-item-action" href="#experiencia" data-bs-dismiss="offcanvas">Experiência Profissional</a>
+                            <a class="list-group-item list-group-item-action" href="#resumo" data-bs-dismiss="offcanvas">Resumo Profissional</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main class="col-12 col-md-9">
+                <header class="mb-4 text-center">
+                    <h1 class="mb-1">Gerador De Curriculos</h1>
+                    <p >Preencha os campos abaixo com seus dados para gerar seu curriculo !</p>
+                </header>
+                <form action="curriculo.php" method="post" class="row g-4">
+                    <section id="info-pessoais" class="col-12 p-3">
+                        <h2 class="h5 mb-3">INFORMAÇÕES PESSOAIS</h2>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome Completo:</label>
+                            <input type="text" id="nome" name="PHPnome" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="data-nascimento" class="form-label">Data nascimento:</label>
+                                <input type="date" id="data-nascimento" name="PHPdata-nascimento" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="nacionalidade" class="form-label">Nacionalidade:</label>
+                                <input type="text" id="nacionalidade" name="PHPnacionalidade" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="estado-civil" class="form-label">Estado Civil</label>
+                                <input type="text" id="estado-civil" name="PHPestado-civil" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="cidade" class="form-label">Cidade:</label>
+                                <input type="text" id="cidade" name="PHPcidade" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="estado" class="form-label">Estado:</label>
+                                <input type="text" id="estado" name="PHPestado" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="PHPemail" class="form-control" required>
+                        </div>
+                    </section>
+                    <section id="formacao" class="col-12 p-3">
+                        <h2 class="h5 mb-3">FORMAÇÃO ACADEMICA</h2>
+                        <div class="mb-3">
+                            <label for="nome-do-curso" class="form-label">Nome do curso:</label>
+                            <input type="text" id="nome-do-curso" name="PHPnome-do-curso" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="instituicao-de-ensino" class="form-label">Instituição de ensino:</label>
+                            <input type="text" id="instituicao-de-ensino" name="PHPinstituicao-de-ensino" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="inicioAcademico" class="form-label">Início:</label>
+                                <input type="month" id="inicioAcademico" name="PHPinicioAcademico" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="terminoAcademico" class="form-label">Término:</label>
+                                <input type="month" id="terminoAcademico" name="PHPterminoAcademico" class="form-control" required>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="experiencia" class="col-12 p-3">
+                        <h2 class="h5 mb-3">EXPERIENCIA PROFISSIONAL</h2>
+                        <div class="mb-3">
+                            <label for="nome-da-empresa" class="form-label">Nome da empresa:</label>
+                            <input type="text" id="nome-da-empresa" name="PHPnome-da-empresa" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cargo" class="form-label">Cargo:</label>
+                            <input type="text" id="cargo" name="PHPcargo" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="inicioProfissional" class="form-label">Início:</label>
+                                <input type="month" id="inicioProfissional" name="PHPinicioProfissional" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="terminoProfissional" class="form-label">Término: (Esse campo não é obrigatorio !)</label>
+                                <input type="month" id="terminoProfissional" name="PHPterminoProfissional" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="responsabilidades" class="form-label">Responsabilidades:</label>
+                            <textarea id="responsabilidades" name="PHPresponsabilidades" rows="4" class="form-control" required></textarea>
+                        </div>
+                    </section>
+                    <section id="resumo" class="col-12 p-3">
+                        <h2 class="h5 mb-3">RESUMO PROFISSIONAL</h2>
+                        <div class="mb-3">
+                            <label for="resumo-profissional" class="form-label">Resumo Profissional:</label>
+                            <textarea id="resumo-profissional" name="PHPresumo-profissional" rows="6" class="form-control" required></textarea>
+                        </div>
+                    </section>
+                    <div class="col-12 text-center mb-4">
+                        <button type="submit" class="btn btn-primary">Gerar Curriculo</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #38004e, #6c06ac);
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.barraNavegacao {
+    background-color: transparent;
+    border-radius: 24px;
+    padding: 10px;
+}
+
+.linkNavegacao {
+    border:1px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.curriculo {
+    background-color: #fff;
+    color: #000;
+    padding: 80px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+}
+
+.botaoGerarPDF {
+    background-color: red;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 14px;
+    font-weight: bold;
+}
+
+.linkVoltar {
+    background-color: rgb(101, 101, 221);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.position-sticky {
+    top: 20px;
+}
